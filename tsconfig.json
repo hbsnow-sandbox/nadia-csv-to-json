@@ -1,0 +1,17 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "strict": true,
+      "baseUrl": "app",
+      "paths": {
+        "*": ["@types/*"]
+      },
+      "lib": [
+        "es6"
+      ],
+      "resolveJsonModule": true,
+      "esModuleInterop": true
+    }
+  }

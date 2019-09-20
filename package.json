@@ -4,5 +4,14 @@
   "main": "index.js",
   "repository": "https://github.com/hbsnow-sandbox/nadia-csv-to-json.git",
   "author": "hbsnow <yuki.4uing@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json"
+  },
+  "dependencies": {
+    "@types/papaparse": "^5.0.1",
+    "ava": "^2.4.0",
+    "papaparse": "^5.1.0",
+    "typescript": "^3.6.3"
+  }
 }
