@@ -1,0 +1,8 @@
+{
+  "name": "nadia-csv-to-json",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hbsnow-sandbox/nadia-csv-to-json.git",
+  "author": "hbsnow <yuki.4uing@gmail.com>",
+  "license": "MIT"
+}
