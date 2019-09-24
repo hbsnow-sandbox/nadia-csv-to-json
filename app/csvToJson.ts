@@ -2,17 +2,22 @@ import Papa from 'papaparse'
 import fs from 'fs'
 import util from 'util'
 
-const readFile = util.promisify(fs.readFile)
+export const readFile = util.promisify(fs.readFile)
 
-;(async () => {
-  const csv = await readFile('./app/exam.csv', 'utf-8')
+export const csvToJson = async (
+  inputPath: string,
+  outputPath: string
+): Promise<void> => {
+  const csv = await readFile(inputPath, 'utf-8')
   const exams = Papa.parse(csv, {
     header: true,
     skipEmptyLines: true
   })
 
-  fs.writeFile('./src/assets/data/race.json', JSON.stringify(exams), (err) => {
-    if(err) console.log(err)
+  fs.writeFile(outputPath, JSON.stringify(exams), err => {
+    if (err) console.log(err)
   })
+}
+;(async (): Promise<void> => {
+  await csvToJson('./app/exam.csv', './build/exam.json')
 })()
-

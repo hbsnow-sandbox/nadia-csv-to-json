@@ -1,0 +1,1 @@
+{"data":[{"氏名":"Aさん","国語":"0","数学":"1","英語":"2"},{"氏名":"Bさん","国語":"3","数学":"4","英語":"5"}],"errors":[],"meta":{"delimiter":",","linebreak":"\n","aborted":false,"truncated":false,"cursor":31,"fields":["氏名","国語","数学","英語"]}}

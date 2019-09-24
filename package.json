@@ -6,12 +6,32 @@
   "author": "hbsnow <yuki.4uing@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p ./tsconfig.json"
+    "test": "npx tsc && npx ava --verbose",
+    "build": "npx tsc",
+    "format": "prettier --write '**/*.{js,mjs,ts,md,}' '!build/**/*' '!app/**/*'",
+    "lint": "eslint src/*.ts",
+    "lintfix": "eslint app/*.ts --fix"
   },
   "dependencies": {
     "@types/papaparse": "^5.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
     "ava": "^2.4.0",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "papaparse": "^5.1.0",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.4.1",
     "typescript": "^3.6.3"
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
   }
 }
