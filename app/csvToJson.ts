@@ -1,14 +1,11 @@
 import Papa from 'papaparse'
 import fs from 'fs'
-import util from 'util'
-
-export const readFile = util.promisify(fs.readFile)
 
 export const csvToJson = async (
   inputPath: string,
   outputPath: string
 ): Promise<void> => {
-  const csv = await readFile(inputPath, 'utf-8')
+  const csv = await fs.promises.readFile(inputPath, 'utf-8')
   const exams = Papa.parse(csv, {
     header: true,
     skipEmptyLines: true
